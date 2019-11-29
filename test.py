@@ -7,12 +7,12 @@ import numpy as np
 from scipy import integrate
 
 # Test Linear Interpolation
-# pontos = [(60, 2700), (70, 3000)]
-# g = 62
+# pontos = [(30, 3), (40, 5)]
+# g = 37
 # nPontos = 2
 
 # linearIp = LinearInterpolation(pontos)
-# print(linearIp.P(g))  # 2760.0000000000005
+# print(linearIp.P(g))  # 4.4
 
 # Test Quadratic Interpolation
 # pontos = [(3, 20.08), (3.2, 24.53), (3.4, 29.96)]
@@ -32,7 +32,7 @@ from scipy import integrate
 # mp = MultipleLinearFitting(x, y)
 # mp.solve()
 
-#trapeze = Trapeze('compost', 10, -2, 2)
-simpson = SimpsonTwo(12, 0, 2)
+# trapeze = Trapeze('compost', 10, -2, 2)
+# simpson = SimpsonTwo(12, 0, 2)
 
-print(integrate.quad(lambda x: x**5, 0, 2)[0])
+# print(integrate.quad(lambda x: x**5, 0, 2)[0])
