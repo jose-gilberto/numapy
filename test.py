@@ -2,7 +2,7 @@ from interpolation import LinearInterpolation
 from interpolation import QuadraticInterpolation
 from curvefitting import MultipleLinearFitting
 from integration import Trapeze
-from integration import SimpsonTwo
+# from integration import SimpsonTwo
 import numpy as np
 from scipy import integrate
 
@@ -36,3 +36,6 @@ from scipy import integrate
 # simpson = SimpsonTwo(12, 0, 2)
 
 # print(integrate.quad(lambda x: x**5, 0, 2)[0])
+
+from integration import SimpsonIntegration
+simpson = SimpsonIntegration(lambda x: x**5, 200, 0, 2)

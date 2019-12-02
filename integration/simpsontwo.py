@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class SimpsonTwo:
+class SecondSimpsonIntegration:
 
     def __init__(self, k, a, b):
         self.k = k
