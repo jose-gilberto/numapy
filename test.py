@@ -37,5 +37,25 @@ from scipy import integrate
 
 # print(integrate.quad(lambda x: x**5, 0, 2)[0])
 
+# from integration import SimpsonIntegration
+# simpson = SimpsonIntegration(lambda x: np.log(x)/x**2, 50, 2, 4)
+
+# from integration import SecondSimpsonIntegration
+# simpsonTwo = SecondSimpsonIntegration(50, 2, 4)
+
+# A = [[7, -1, 0.34],
+#      [-1, 61, 6.1],
+#      [0.34, 6.1, 2.38]]
+
+# b = [59.4, 35.8, 33.69]
+
+# print(np.linalg.solve(A, b))
+
+# -------- 1/3 SIMPSON ---------
 from integration import SimpsonIntegration
-simpson = SimpsonIntegration(lambda x: x**5, 200, 0, 2)
+# Parametros:
+# 1 - Função (lambda x: logica da funcao)
+# 2 - N (numero de divisões)
+# 3 - A - limite inferior
+# 4 - B - limite superior
+simpson = SimpsonIntegration(lambda x: np.sin(x), 10, np.pi/2, np.pi)

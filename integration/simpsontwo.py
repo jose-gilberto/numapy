@@ -11,7 +11,7 @@ class SecondSimpsonIntegration:
         self.solve()
 
     def f(self, x):
-        return x**5
+        return np.log(x)/x**2
 
     def solve(self):
         calculus = self.f(self.a) + self.f(self.b)
