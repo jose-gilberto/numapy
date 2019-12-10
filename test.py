@@ -1,8 +1,6 @@
 from interpolation import LinearInterpolation
 from interpolation import QuadraticInterpolation
 from curvefitting import MultipleLinearFitting
-from integration import Trapeze
-# from integration import SimpsonTwo
 import numpy as np
 from scipy import integrate
 
@@ -32,28 +30,31 @@ from scipy import integrate
 # mp = MultipleLinearFitting(x, y)
 # mp.solve()
 
-# trapeze = Trapeze('compost', 10, -2, 2)
-# simpson = SimpsonTwo(12, 0, 2)
 
-# print(integrate.quad(lambda x: x**5, 0, 2)[0])
+# -------- TRAPÉZIO COMPOSTO --------
 
-# from integration import SimpsonIntegration
-# simpson = SimpsonIntegration(lambda x: np.log(x)/x**2, 50, 2, 4)
+from integration import Trapeze
 
-# from integration import SecondSimpsonIntegration
-# simpsonTwo = SecondSimpsonIntegration(50, 2, 4)
+# Parametros:
+# 1 - Função (lambda x: logica da funcao)
+# 2 - Tipo de integração (usar somente 'compost')
+# 3 - N (numero de divisões)
+# 4 - A - limite inferior
+# 5 - B - limite superior
+# O resultado já é printado na tela
 
-# A = [[7, -1, 0.34],
-#      [-1, 61, 6.1],
-#      [0.34, 6.1, 2.38]]
+# DESCOMENTAR LINHA ABAIXO SE FOR UTILIZAR E MUDAR OS PARAMETROS
+# -> trapeze = Trapeze(lambda x: np.sin(x), 'compost', 30, np.pi/2, np.pi)
 
-# b = [59.4, 35.8, 33.69]
+# Para retornar o erro basta chamar a função error e passar como parâmetro
+# a derivada segunda da função de integração
 
-# print(np.linalg.solve(A, b))
+# DESCOMENTAR LINHA ABAIXO SE FOR UTILIZAR E MUDAR OS PARÂMETROS
+# -> trapeze.error(lambda x: -np.sin(x))
+
 
 # -------- 1/3 SIMPSON ---------
 
-from integration import SimpsonIntegration
 # Parametros:
 # 1 - Função (lambda x: logica da funcao)
 # 2 - N (numero de divisões)
@@ -73,7 +74,6 @@ from integration import SimpsonIntegration
 
 # -------- 3/8 SIMPSON ---------
 
-from integration import SecondSimpsonIntegration
 # Parametros:
 # 1 - Função (lambda x: logica da funcao)
 # 2 - N (numero de divisões)
