@@ -33,3 +33,16 @@ class SimpsonIntegration:
             i += 1
         res = res * (self.h / 3)
         print('O resultado da integração numérica é: {}'.format(res))
+
+    def error(self, func):
+        x = []
+        fiv_x = []
+
+        i = 0
+        while i <= self._k:
+            x.append(self._a + i * self.h)
+            fiv_x.append(func(x[i]))
+            i += 1
+
+        err = ((self._b - self._a)/180) * self.h ** 4 * max(fiv_x)
+        print('O erro máximo da integração usando 1/3 Simpson é: {}'.format(err))

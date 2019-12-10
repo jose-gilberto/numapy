@@ -52,10 +52,41 @@ from scipy import integrate
 # print(np.linalg.solve(A, b))
 
 # -------- 1/3 SIMPSON ---------
+
 from integration import SimpsonIntegration
 # Parametros:
 # 1 - Função (lambda x: logica da funcao)
 # 2 - N (numero de divisões)
 # 3 - A - limite inferior
 # 4 - B - limite superior
-simpson = SimpsonIntegration(lambda x: np.sin(x), 10, np.pi/2, np.pi)
+# O resultado já é printado na tela
+
+# DESCOMENTAR LINHA ABAIXO SE FOR UTILIZAR E MUDAR OS PARAMETROS
+# -> simpson = SimpsonIntegration(lambda x: np.sin(x), 10, np.pi/2, np.pi)
+
+# Para retornar o erro basta chamar a função error e passar como parâmetro
+# a derivada quarta da função de integração [Nesse caso a derivada
+# era igual a função mas somente nesse caso pois é uma trigonométrica]
+
+# DESCOMENTAR LINHA ABAIXO SE FOR UTILIZAR E MUDAR OS PARÂMETROS
+# -> simpson.error(lambda x: np.sin(x))
+
+# -------- 3/8 SIMPSON ---------
+
+from integration import SecondSimpsonIntegration
+# Parametros:
+# 1 - Função (lambda x: logica da funcao)
+# 2 - N (numero de divisões)
+# 3 - A - limite inferior
+# 4 - B - limite superior
+# O resultado já é printado na tela
+
+# DESCOMENTAR LINHA ABAIXO SE FOR UTILIZAR E MUDAR OS PARAMETROS
+# -> sndSimpson = SecondSimpsonIntegration(lambda x: np.sin(x), 12, np.pi/2, np.pi)
+
+# Para retornar o erro basta chamar a função error e passar como parâmetro
+# a derivada quarta da função de integração [Nesse caso a derivada
+# era igual a função mas somente nesse caso pois é uma trigonométrica]
+
+# DESCOMENTAR LINHA ABAIXO SE FOR UTILIZAR E MUDAR OS PARÂMETROS
+# -> sndSimpson.error(lambda x: np.sin(x))
